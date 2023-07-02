@@ -1,0 +1,59 @@
+html * {
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, rgba(22, 22, 185, 0.5), rgba(4, 8, 10, 0.9)),  url("images/dice_wallpaper.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interfaceArea {
+    flex: 1;
+}
+
+p {
+    color: #f8cb03;
+    text-align: center;
+}
+
+div {
+    text-align: center;
+    margin: 2rem;
+}
+
+input {
+    text-align: center;
+    color: rgb(3, 3, 71);
+    margin: 1rem 3rem;
+}
+
+button,
+input {
+    text-align: center;
+    color: rgb(3, 3, 71);
+    cursor: pointer;
+}
+
+button {
+    background-color: #03f8bb;
+    padding: 1rem 3rem;
+}
+
+.mainButton {
+    padding: 1rem 3rem;
+}
+
+.secondaryButton {
+    padding: 1rem 1rem;
+}
+
+button:hover {
+    background-color: blueviolet;
+    color: lightblue;
+}
