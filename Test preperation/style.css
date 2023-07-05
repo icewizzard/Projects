@@ -1,0 +1,9 @@
+#mytable{
+    width: 50%;
+}
+#order{
+    width: 50%;
+}
+.not-display-element{
+    display: none;
+}
