@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css files/mpstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <h1 class="Welcomm">Tic Tac Toe</h1>
+    <p class="message">Current turn: X</p>
+    <div class="back-button">
+        <a>Back</a>
+    </div>
+    <div class="container">
+        <table>
+            <tr>
+                <td class="cell" onclick="handleCellClick(this, 0)"></td>
+                <td class="vert cell" onclick="handleCellClick(this, 1)"></td>
+                <td class="cell" onclick="handleCellClick(this, 2)"></td>
+            </tr>
+            <tr>
+                <td class="hori cell" onclick="handleCellClick(this, 3)"></td>
+                <td class="vert hori cell" onclick="handleCellClick(this, 4)"></td>
+                <td class="hori cell" onclick="handleCellClick(this, 5)"></td>
+            </tr>
+            <tr>
+                <td class="cell" onclick="handleCellClick(this, 6)"></td>
+                <td class="vert cell" onclick="handleCellClick(this, 7)"></td>
+                <td class="cell" onclick="handleCellClick(this, 8)"></td>
+            </tr>
+        </table>
+    </div>
+    <button >
+        RestGame
+    </button>
+    <script src="./js files/mpscript.js"></script>
+</body>
+
+</html>

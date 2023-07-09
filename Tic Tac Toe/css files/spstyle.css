@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+* {
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-image: linear-gradient(to bottom, rgba(22, 22, 185, 0.5), rgba(4, 8, 10, 0.9)),
+        url("../images/bgpic.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    display: block;
+    margin: 40px auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    color: #CFC547;
+    letter-spacing: 5px;
+    text-shadow: 10px 10px 25px rgb(81, 67, 21),
+        -10px 10px 25px rgb(81, 67, 21),
+        -10px -10px 25px rgb(81, 67, 21),
+        10px -10px 25px rgb(81, 67, 21);
+}
+
+.message {
+    margin: 20px auto;
+    margin-bottom: 3%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: #FF0000;
+    letter-spacing: 5px;
+    text-shadow: 0 2px 2px #FF0000,
+        -2px 5px 0 #FF7F00,
+        -4px 10px 0 #FFFF00,
+        -8px 15px 0 #00FF00,
+        -12px 20px 0 #0000FF,
+        -16px 25px 0 #4B0082,
+        -20px 30px 0 #9400D3;
+}
+
+.btn {
+    cursor: pointer;
+    position: relative;
+    text-shadow: 5px 5px #ff0000;
+    filter: drop-shadow(-10px 10px 20px #fff000);
+    font-size: 28px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 2s;
+
+    &:after,
+    &:before {
+        content: " ";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        border: 0px solid #fff;
+        transition: all 1s;
+    }
+
+    &:after {
+        top: -1px;
+        left: -1px;
+        border-top: 5px solid rgb(201, 245, 6);
+        border-left: 5px solid rgb(240, 7, 7);
+    }
+
+    &:before {
+        bottom: -1px;
+        right: -1px;
+        border-bottom: 5px solid rgb(6, 247, 18);
+        border-right: 5px solid rgb(240, 17, 203);
+    }
+
+    &:hover {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+
+        &:before,
+        &:after {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.data-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50vw;
+    height: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+td {
+    width: 150px;
+    height: 150px;
+}
+
+
+
+.table {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10%;
+    margin: 5px auto;
+}
+
+.cell {
+    width: 33.33%;
+    padding: 0;
+    text-align: center;
+    font-size: 70px;
+}
+

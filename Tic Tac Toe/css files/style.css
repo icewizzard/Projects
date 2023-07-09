@@ -1,0 +1,122 @@
+html * {
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to bottom, rgba(22, 22, 185, 0.5), rgba(4, 8, 10, 0.9)), url("../images/bgpic.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  text-align: center;
+  margin: 2rem;
+}
+
+.interfaceArea {
+  flex: 1;
+}
+
+/* text  */
+.pop-outin {
+  animation: 2s anim-popoutin ease infinite;
+  text-align: center;
+}
+
+@keyframes anim-popoutin {
+  0% {
+    color: rgb(22, 196, 16);
+    transform: scale(0);
+    opacity: 0;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+  25% {
+    color: rgb(229, 255, 0);
+    transform: scale(2);
+    opacity: 1;
+    text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  50% {
+    color: rgb(146, 228, 15);
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    /* animate nothing to add pause at the end of animation */
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.fromtop {
+  animation: 2s anim-fromtop linear infinite;
+}
+
+@keyframes anim-fromtop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  50% {}
+
+  100% {}
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation ease 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.headline {
+  margin-bottom: 7.5%;
+}
+
+
+
+/* butttons */
+button {
+  text-align: center;
+  color: rgb(3, 3, 71);
+  cursor: pointer;
+  background-color: #03f8bb;
+}
+
+.singleplayer {
+  padding: 1rem 3rem;
+}
+
+.multiplayer {
+  padding: 1rem 1rem;
+}
+
+button:hover {
+  background-color: blueviolet;
+  color: lightblue;
+}
