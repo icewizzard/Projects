@@ -107,3 +107,7 @@ const backButton = document.querySelector('.btn');
 backButton.addEventListener('click', function () {
     window.location.href = "enterence.html";
 });
+
+document.querySelector(".button").addEventListener('click', function () {
+    resetBoard();
+});

@@ -12,33 +12,43 @@
 </head>
 
 <body>
-    <h1 class="Welcomm">Tic Tac Toe</h1>
-    <p class="message">Current turn: X</p>
-    <div class="back-button">
-        <a>Back</a>
+    <div class="text-box">
+        <h1>Tic Tac Toe</h1>
+        <p class="message">Current turn: X</p>
+
+        <div class="data-container">
+            <span class="btn">Home Page </span>
+            <a class="button" href="#" style="--color:#1e9bff;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Rest Game
+            </a>
+        </div>
     </div>
     <div class="container">
-        <table>
-            <tr>
-                <td class="cell" onclick="handleCellClick(this, 0)"></td>
-                <td class="vert cell" onclick="handleCellClick(this, 1)"></td>
-                <td class="cell" onclick="handleCellClick(this, 2)"></td>
-            </tr>
-            <tr>
-                <td class="hori cell" onclick="handleCellClick(this, 3)"></td>
-                <td class="vert hori cell" onclick="handleCellClick(this, 4)"></td>
-                <td class="hori cell" onclick="handleCellClick(this, 5)"></td>
-            </tr>
-            <tr>
-                <td class="cell" onclick="handleCellClick(this, 6)"></td>
-                <td class="vert cell" onclick="handleCellClick(this, 7)"></td>
-                <td class="cell" onclick="handleCellClick(this, 8)"></td>
-            </tr>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                </tr>
+                <tr>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                </tr>
+                <tr>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                </tr>
+            </tbody>
         </table>
     </div>
-    <button >
-        RestGame
-    </button>
+
     <script src="./js files/mpscript.js"></script>
 </body>
 

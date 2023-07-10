@@ -1,5 +1,3 @@
-
-
 // Game variables
 let currentPlayer = "X";
 let gameActive = true;
@@ -40,7 +38,13 @@ function checkGameStatus() {
     if (roundWon) {
         gameActive = false;
         alert("Player " + currentPlayer + " won!");
-        restartGame();
+        if(currentPlayer = "X"){
+            currentPlayer = "X"
+        }
+        if(currentPlayer = "O"){
+            currentPlayer = "O"
+        }
+        restartGame(currentPlayer);
     }
 
     let roundDraw = !gameState.includes("");
@@ -61,35 +65,44 @@ function resetBoard() {
 }
 
 // Function to restart the game
-function restartGame() {
-    currentPlayer = "X";
+function restartGame(currentPlayer) {
     gameActive = true;
     resetBoard();
-    document.querySelector("#message").textContent = "Current turn: " + currentPlayer;
+    document.querySelector(".message").textContent = "Current turn: " + currentPlayer;
 }
 
-//Function to handle cell click
+// Function to handle cell click
+function handleCellClick(event) {
+    const clickedCell = event.target;
+    const clickedCellIndex = Array.from(document.querySelectorAll(".cell")).indexOf(clickedCell);
 
-function handleCellClick(clickedCell, clickedCellIndex) {
     if (!gameActive || gameState[clickedCellIndex] !== "") {
         return;
-
     }
+
     gameState[clickedCellIndex] = currentPlayer;
-    
     clickedCell.innerText = currentPlayer;
 
     checkGameStatus();
-    currentPlayer = currentPlayer === "X" ? "O" : "X"
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
     document.querySelector(".message").textContent = "Current turn: " + currentPlayer;
-
 }
 
-
-
-// back button
-const backButton = document.querySelector('.back-button');                                                                                                                                                                                                  
+// Back button
+const backButton = document.querySelector('.btn');
 
 backButton.addEventListener('click', function () {
     window.location.href = "enterence.html";
+});
+
+// Reset game button
+const resetButton = document.querySelector('.button');
+
+resetButton.addEventListener('click', function () {
+    restartGame();
+});
+
+// Add event listeners to cells
+document.querySelectorAll(".cell").forEach(cell => {
+    cell.addEventListener("click", handleCellClick);
 });
